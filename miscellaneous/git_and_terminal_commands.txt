@@ -1,0 +1,24 @@
+* Terminal Commands: 
+
+1. mkdir ----> make directory
+2. ls ---> list directory/files ( ubuntu/mac )
+3. tree --->  (windows)
+4. pwd ---> Present working directory 
+5. cd --> change directory , eg: "cd ..", "cd /Users/aryan/Desktop/NewtonSchool"
+6. touch --> used to create a file. e.g "touch somefile.txt"
+7 cat <filename> ---> prints content of file on the terminal
+
+
+
+
+==========Git===================
+1. Installation: Download github
+
+1. git init -> Initialized empty Git repository
+2. git status -> tracked files, untracked files, commits 
+3. git diff -> what all changes in which all files/folder has been done
+4. git add <filename/folderName> --> start tracking added files or folders
+5. git commit -m "<message>" ---> creates a commit with a message
+6 git log --> check all the commits in a branch 
+7 git diff --> Check changes made to files or folders ( Added/Deleted/Modified)
+8 git clone <repository_path> : clones a repository in your local machine
