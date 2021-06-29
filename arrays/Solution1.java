@@ -3,12 +3,17 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-// Assignment1 -> Printing Hello World
 
+/**
+ * Assignment1 -> Printing Hello World
+ */
 class Solution1 {
 
 	public static void main(String[] args){
 
-		System.out.println("Hello World");
+		Scanner sc = new Scanner(System.in);
+		String s = sc.next();
+
+		System.out.println("You have provided this: " + s);
 	}
 }
