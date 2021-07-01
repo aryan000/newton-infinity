@@ -7,6 +7,9 @@
 5. cd --> change directory , eg: "cd ..", "cd /Users/aryan/Desktop/NewtonSchool"
 6. touch --> used to create a file. e.g "touch somefile.txt"
 7 cat <filename> ---> prints content of file on the terminal
+8 mv <path_to_source> <path_to_destination> ---> to move file or folder from source path to destination path
+9 cp <path_to_source> <path_to_destination> ---> to copy file or folder from source path to destination path
+
 
 
 

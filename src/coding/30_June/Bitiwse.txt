@@ -1,0 +1,197 @@
+a b a&b a||b  a^b
+0 0 0    0     0
+0 1 0    1     1
+1 0 0    1     1
+1 1 1    1     0
+
+
+* a&&b --> a and b -> if any a or b is 0, result is 0, otherwise 1
+* a || b -> a or b -> if any of a or b is 1, then result is 1, otherwise 0
+
+* a^b --> a xor b --> if both are same, then result is 0, otherwise 1,
+    odd number of 1's -> output is 1,
+    even number of 1's -> output is 0
+
+possible values of a, b is -> [0,1]
+
+
+Example:
+
+
+############# And #################
+
+1. 10 & 12
+10 ---> 1010
+12 ---> 1100
+    &
+  _____________
+          1000 = 8
+
+2. 4  &  11
+	4 ---> 0100                 (2^3+2^2+2^1+2^0)
+	11 --> 1011
+	 &
+	____________
+          0000
+
+
+################# OR ##############
+3. 4 || 11
+   4 ---->  0100
+   11 ----> 1011
+   ||
+   ______________
+            1111 ----> 8 + 4 +2+1 = 15
+
+4. 18 || 7
+   18 ----> 0001 0010
+   7 ---->  0000 0111
+   ||
+   ___________________
+             0001 0111 => 16 + 7 = 23
+
+
+################# XOR ##############
+
+Lets assume 32 bit machine
+  number is represented like this: 0000 0000 0000 0000 0000 0000 0010 0000
+
+
+ 5. 9^5
+    9 ----> 1001
+    5 ----> 0101
+     ^
+     ___________
+            1100 => 8 +4 = 12
+ 6. 25 ^ 17
+    25 ------>  0001 1001
+    17 ------>  0001 0001
+    ^
+     ____________________
+                0000 1000 => 8
+
+ 7. 6^6
+    6 ---> 0110
+    6 ---> 0110
+    ^
+    ____________
+           0000 => 0
+
+
+          0111
+          0111
+         ^
+         ______
+          0000
+
+* [Note: Important]  Property of xor: a^a => 0
+* [Note: Important]  Property of xor: a^0 = 0^a => a
+* [Note: Important  property of xor]: a^(b^c) = (a^b)^c = (a^c)^b
+
+ 8. 4^6^7
+
+   4---->   0100
+   6 ---->  0110
+   7 ---->  0111
+
+   ^
+   _______________
+             0101 ===> 5
+
+  9. 10^3^10
+     10 ----> 1010
+      3 ----> 0011
+     10 ----> 1010
+     ^
+     ______________
+              0011 => 3
+
+     10^3^10 => 10^10 ^ 3 =====> 0^3 ===> 3
+
+   10. 8^4^8^4
+       => (8^8) ^ (4^4)
+       => 0 ^ 0
+       => 0
+
+
+   11. 4^5^2^3^5^4^2
+       => 4^4 ^ 5^5 ^ 3 ^ 2^2
+       => (0 ^ 0) ^ (3 ^ 0)
+       => 0 ^ 3
+       => 3
+
+
+   12. [ 1, 2, 1 , 2, 3, 4, 5, 3, 5]
+
+    ==> 1^2^1^2^3^4^5^3^5
+    ==> 1^1^2^2^3^3^4^5^5
+    ===> 4
+
+
+
+/**
+* Function: it takes array of integers and returns the xor of all the elements of that array
+* Input: an array of integers
+* Output: an integer
+*
+**/
+public int getXor(int arr[]){
+
+	int result = 0;
+
+	for(int i =0; i< arr.length; i++){
+		result = result^arr[i];
+	}
+	return result;
+}
+
+Example :
+result = 0
+[1,2,1,2,3,4,5,3,5]
+
+i =0, result ^1 = 0^1 = 1
+i = 1; result^2 = 1^2
+i =2 ; result^1 = 1^2^1 = 2
+i =3; result^2 => 2^2 = 0
+.
+.
+.
+.
+.
+.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,75 @@
+===== Exponential Modularization ======
+
+
+a^b%m ====> a to the power b mod m
+
+a^(....2^2+2^1+2^0)
+
+
+2^5
+
+5 ---> 101
+
+2^(2^2*1 + 2^1*0 + 2^0*1)
+
+(2^4*2^0*2^2)%m
+
+((2^4%m)*(2^0%m)*(2^2)%m)%m
+
+
+
+
+
+
+---->
+Property
+1. Maths: a^b*a^c ==> a^(b+c)
+2. Modulus : (a*b)%m = ((a%m)*(b%m))%m
+
+
+2^3 * 2^2 = 8 * 4 = 32
+
+2^(3+2) = 2^5 = 32
+
+
+
+Modulo property:
+
+(a+b)%m = ((a%m) + (b%m))%m
+
+(a*b)%m = ((a%m)*(b%m))%m
+
+
+
+
+
+
+
+
+(a^b)%m
+
+a^(....2^2*c+ 2^1*b+2^0*a)%m
+
+
+
+
+
+Divisors: Prime number divisors
+
+
+30
+2 3 5 7 11 13 17 19 23 29
+
+6 -> 2+ 2 = 4
+
+
+
+
+
+
+
+
+
+
+
+
